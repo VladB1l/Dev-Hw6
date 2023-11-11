@@ -14,7 +14,7 @@ a {
 
 p {
   font-size: 20px;
-  line-height: 28px;
+  line-height: 32px;
 }
 
 .flx_spc_btwn {
@@ -59,7 +59,7 @@ nav {
 }
 
 .sml-appBtn {
-  font-size: 13px;
+  font-size: 15px;
   background-color: white;
   color: black;
   border-radius: 25px;
@@ -78,7 +78,7 @@ a.white:hover {
   padding-top: 75px;
   font-size: 20px;
   color: white;
-  width: 700px;
+  width: 750px;
   text-align: center;
   flex-direction: column;
 }
@@ -95,7 +95,7 @@ h1 {
   background-color: white;
   color: black;
   border-radius: 45px;
-  padding: 15px 30px;
+  padding: 18px 35px;
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
@@ -116,6 +116,7 @@ a.black:hover {
 
 .banner {
   position: absolute;
+  overflow: hidden;
   z-index: -1;
   width: 100%;
   height: 630px;
@@ -126,23 +127,25 @@ a.black:hover {
 
 .banner img:nth-child(1) {
   position: absolute;
-  left: -200px;
+  width: 100%;
+  left: -100px;
   bottom: 0;
 }
 
 .banner img:nth-child(2) {
   position: absolute;
-  right: -50px;
+  left: 75%;
   bottom: 0;
 }
 
 .banner img:nth-child(3) {
   position: absolute;
-  left: -75px;
+  right: 75%;
   bottom: 0;
 }
 
 .content {
+  overflow: hidden;
   width: 100%;
 }
 
@@ -180,7 +183,7 @@ h2 {
 }
 
 .content-column img {
-  width: 1100px;
+  width: 100%;
 }
 
 h3 {
