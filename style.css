@@ -86,6 +86,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.buttons{
+    margin-top: 30px;
+}
+
 .buttons a {
   background-color: white;
   color: black;
