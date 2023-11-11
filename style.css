@@ -8,34 +8,41 @@ ul {
   list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.flx_spc_btwn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flx_spc_btwn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shadow:hover {
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.45);
 }
 
 header {
   width: 100%;
-  background-color: #404eed;
   display: flex;
   justify-content: center;
 }
 
 nav {
-  min-width: 50%;
+  width: 1080px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .logo img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
 }
 
 .nav_list li {
   margin: 20px;
+  font-weight: 600;
 }
 
 .nav_list li a {
@@ -47,14 +54,16 @@ nav {
 }
 
 .appBtn {
+  font-size: 13px;
   background-color: white;
   color: black;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 10px 15px;
   transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
-.appBtn:hover {
+a.white:hover {
   color: #5865f2;
-  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.45);
 }
