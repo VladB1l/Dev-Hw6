@@ -8,25 +8,31 @@ ul {
   list-style: none;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.flx_spc_btwn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flx_spc_btwn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shadow:hover {
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.45);
 }
 
 header {
   width: 100%;
-  background-color: #404eed;
   display: flex;
   justify-content: center;
 }
 
 nav {
-  min-width: 50%;
+  width: 1080px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .logo img {
@@ -36,6 +42,7 @@ nav {
 
 .nav_list li {
   margin: 20px;
+  font-weight: 600;
 }
 
 .nav_list li a {
@@ -47,14 +54,64 @@ nav {
 }
 
 .appBtn {
+  font-size: 13px;
   background-color: white;
   color: black;
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 10px 15px;
   transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
-.appBtn:hover {
+a.white:hover {
   color: #5865f2;
-  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.45);
+}
+
+.container {
+  margin: auto;
+  font-size: 20px;
+  color: white;
+  width: 700px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.container p {
+  line-height: 28px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.buttons a {
+  background-color: white;
+  color: black;
+  border-radius: 45px;
+  padding: 15px 30px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.buttons a svg {
+  padding-right: 10px;
+}
+a.black {
+  background-color: #23272a;
+  color: white;
+  margin-left: 15px;
+}
+
+a.black:hover {
+  background-color: #2f3233;
+}
+
+.banner{
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #404eed;
+
 }
