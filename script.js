@@ -60,21 +60,24 @@ close_icon.addEventListener("click", CloseVertic);
 vertical_icon.addEventListener("click", ShowVertic);
 
 function CloseVertic() {
-    setTimeout(() => {
-        vertic.style.display = "none"
-    }, 200);
-    vertic.style.transform = "translate(400px, 0px)"
-    blackBg.style.display = "none"
     document.body.style.overflow = "auto";
+    setTimeout(() => {
+        vertic.style.display = "none";
+    }, 200);
+    vertic.style.transform = "translate(400px, 0px)";
+    blackBg.style.display = "none";
+   
 }
 
 function ShowVertic() {
+    vertic.style.transform = "translate(400px, 0px)"
+    document.body.style.overflow = "hidden";
     vertic.style.display = "flex";
     setTimeout(() => {
         vertic.style.transform = "translate(0px, 0px)";
     }, 200);
     blackBg.style.display = "block";
-    document.body.style.overflow = "hidden";
+    
 }
 
 window.addEventListener('resize', checkMediaQuery);

@@ -495,7 +495,6 @@ footer > div {
   .vertical_menu {
     display: none;
     transition: 0.5s;
-    transform: translate(400px 0px);
   }
 
   .content > div {
@@ -548,7 +547,7 @@ footer > div {
   }
 
   p {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 25px;
   }
 
@@ -563,9 +562,13 @@ footer > div {
     justify-content: space-between;
     padding: 0px 30px;
   }
-  .logo img{
+  .logo img {
     height: 90px;
     width: 100px;
+  }
+
+  .vertical_menu  .logo img {
+    height: 40px;
   }
 
   .vertical-icon {
@@ -611,7 +614,6 @@ footer > div {
   .vertical_menu {
     display: none;
     transition: 0.5s;
-    transform: translate(400px 0px);
   }
 
   .vertical_menu .sml-appBtn {
@@ -656,7 +658,10 @@ footer > div {
   }
 
   .sparkle {
-    left: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 320px;
+    left: 50%;
     margin-left: -150px;
   }
 
