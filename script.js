@@ -16,7 +16,15 @@ for (let i = 0; i < countries.length; i++) {
 }
 
 dropdown.onclick = function (event) {
-    country_list.style.display = "flex";
+    if (country_list.style.display === "flex") {
+        country_list.style.display = "none";
+        setTimeout(() => {
+            country_list.style.display = "flex";
+        }, 100);
+    }
+    else {
+        country_list.style.display = "flex";
+    }
     event.stopPropagation();
 }
 
@@ -24,18 +32,17 @@ document.body.onclick = function (event) {
     if (!dropdown.contains(event.target)) {
         country_list.style.display = "none";
     }
-   
-}
 
+}
 
 for (let content of contents) {
     let observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show_block');
-          }
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show_block');
+            }
         });
-      });
-      observer.observe(content);
+    });
+    observer.observe(content);
 }
 
