@@ -143,7 +143,9 @@ ul li a:hover {
   width: 100%;
   overflow: auto;
   height: 50%;
+  flex-grow: 2;
 }
+
 .vertical_menu .sml-appBtn {
   display: inline-flex;
   align-items: center;
@@ -522,7 +524,17 @@ footer > div {
   }
 
   footer > div {
-    width: 760px;
+    width: 90%;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .links > div {
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
 /* ----------------------------------------------------------------------------- */
@@ -551,6 +563,10 @@ footer > div {
     justify-content: space-between;
     padding: 0px 30px;
   }
+  .logo img{
+    height: 90px;
+    width: 100px;
+  }
 
   .vertical-icon {
     display: block;
@@ -570,7 +586,7 @@ footer > div {
     padding-top: 0;
     width: 90%;
     text-align: left;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .black {
@@ -609,7 +625,7 @@ footer > div {
     width: 90%;
     padding: 50px 0;
   }
-  
+
   .content:nth-child(2) .text {
     order: 2;
   }
@@ -636,6 +652,7 @@ footer > div {
   .big-appBtn {
     border-radius: 45px;
     padding: 18px 25px;
+    font-size: 16px;
   }
 
   .sparkle {
@@ -652,6 +669,16 @@ footer > div {
   }
 
   footer > div {
-    width: 320px;
+    width: 90%;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .links > div {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
