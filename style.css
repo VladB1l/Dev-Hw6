@@ -97,7 +97,7 @@ a.white:hover {
 
 .container {
   margin: auto;
-  padding-top: 75px;
+  padding-top: 40px;
   font-size: 20px;
   color: white;
   width: 750px;
@@ -151,20 +151,22 @@ a.black:hover {
 
 .banner img:nth-child(1) {
   position: absolute;
-  width: 100%;
-  left: -100px;
+  margin-left: -1300px;
+  left: 50%;
   bottom: 0;
 }
 
 .banner img:nth-child(2) {
   position: absolute;
-  left: 75%;
+  margin-left: 400px;
+  left: 50%;
   bottom: 0;
 }
 
 .banner img:nth-child(3) {
   position: absolute;
-  right: 75%;
+  margin-right: 400px;
+  right: 50%;
   bottom: 0;
 }
 
