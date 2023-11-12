@@ -8,6 +8,7 @@ for (let i = 0; i < 4; i++) {
     country.href = ""
     country.style.display = "flex"
     country.style.padding = "10px"
+    country.style.color = "black"
     country.innerHTML = ` <img src='./assets/${countries[i]}_icon.png' id='country_icon' alt='country_icon'> <div>${countries[i]}</div>`;
     country_list.append(country);
 }
