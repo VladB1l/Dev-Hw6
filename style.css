@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "DiscordFontForHeader";
+  src: url("./assets/Font/ggsans-H.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "DiscordFontForH";
   src: url("./assets/Font/ggsans-ExtraBold.woff") format("woff");
 }
@@ -19,7 +24,6 @@ body {
   margin: 0;
 }
 
-h1,
 h2,
 h3 {
   font-family: "DiscordFontForH", sans-serif;
@@ -108,6 +112,7 @@ a.white:hover {
 h1 {
   font-size: 50px;
   text-transform: uppercase;
+  font-family: "DiscordFontForHeader", sans-serif;
 }
 
 .buttons {
@@ -158,14 +163,14 @@ a.black:hover {
 
 .banner img:nth-child(2) {
   position: absolute;
-  margin-left: 400px;
+  margin-left: 350px;
   left: 50%;
   bottom: 0;
 }
 
 .banner img:nth-child(3) {
   position: absolute;
-  margin-right: 400px;
+  margin-right: 350px;
   right: 50%;
   bottom: 0;
 }
@@ -202,6 +207,9 @@ h2 {
 .content-column > div {
   flex-direction: column;
   text-align: center;
+}
+.content-column h2 {
+  font-family: "DiscordFontForHeader", sans-serif;
 }
 
 .content-column > div > div {
