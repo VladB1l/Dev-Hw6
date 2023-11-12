@@ -189,6 +189,23 @@ a.black:hover {
   align-items: center;
 }
 
+@keyframes wipe-enter {
+  0% {
+    translate: 0px 150px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0px 0px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .show_block {
+    animation: wipe-enter 1s 1;
+  }
+}
+
 .content:nth-child(2n) {
   background-color: whitesmoke;
 }

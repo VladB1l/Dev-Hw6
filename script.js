@@ -1,9 +1,11 @@
 let dropdown = document.querySelector(".dropdown_lng");
 let country_list = document.querySelector(".country_list");
 let countries = ["Ukraine", "Germany", "France", "Spain"];
+let contents = document.querySelectorAll(".content > div")
 
 
-for (let i = 0; i < 4; i++) {
+
+for (let i = 0; i < countries.length; i++) {
     let country = document.createElement("a");
     country.href = ""
     country.style.display = "flex"
@@ -22,6 +24,18 @@ document.body.onclick = function (event) {
     if (!dropdown.contains(event.target)) {
         country_list.style.display = "none";
     }
+   
 }
 
+
+for (let content of contents) {
+    let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show_block');
+          }
+        });
+      });
+      observer.observe(content);
+}
 
