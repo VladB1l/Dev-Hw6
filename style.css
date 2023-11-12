@@ -1,6 +1,28 @@
-html body {
+@font-face {
+  font-family: "DiscordFont";
+  src: url("./assets/Font/ggsans-Normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DiscordFontForH";
+  src: url("./assets/Font/ggsans-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DiscordFontForBigButton";
+  src: url("./assets/Font/ggsans-Medium.woff") format("woff");
+}
+
+body {
+  font-family: "DiscordFont", sans-serif;
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DiscordFontForH", sans-serif;
 }
 
 ul {
@@ -84,6 +106,7 @@ a.white:hover {
 }
 
 h1 {
+  font-size: 50px;
   text-transform: uppercase;
 }
 
@@ -92,6 +115,7 @@ h1 {
 }
 
 .big-appBtn {
+  font-family: "DiscordFontForBigButton", sans-serif;
   background-color: white;
   color: black;
   border-radius: 45px;
@@ -272,22 +296,22 @@ footer > div {
   width: 25px;
 }
 
-.country_list{
-    color: black;
-    position: absolute;
-    display: none;
-    background-color: white;
-    width: 150px;
-    height: 100px;
-    top: 65px;
-    left: 0;
-    overflow: auto;
-    flex-direction: column;
+.country_list {
+  color: black;
+  position: absolute;
+  display: none;
+  background-color: white;
+  width: 150px;
+  height: 100px;
+  top: 65px;
+  left: 0;
+  overflow: auto;
+  flex-direction: column;
 }
 
-.country_list a div{
-margin-left: 10px;
+.country_list a div {
+  margin-left: 10px;
 }
-.country_list a:hover{
-    background-color: whitesmoke;
+.country_list a:hover {
+  background-color: whitesmoke;
 }
