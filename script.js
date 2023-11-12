@@ -1,16 +1,25 @@
 let dropdown = document.querySelector(".dropdown_lng");
 let country_list = document.querySelector(".country_list");
 let countries = ["Ukraine", "Germany", "France", "Spain"];
-let contents = document.querySelectorAll(".content > div")
+let contents = document.querySelectorAll(".content > div");
 
+let vertical_icon = document.querySelector(".vertical-icon");
+let vertic = document.querySelector(".vertical_menu");
+let close_icon = document.querySelector(".close_icon");
 
+let blackBg = document.querySelector(".blackBg");
+let big_appBtns = document.querySelectorAll(".big-appBtn");
+let sml_appBtn = document.querySelector("footer .sml-appBtn");
+let svg = document.querySelector("svg").outerHTML;
+
+checkMediaQuery();
 
 for (let i = 0; i < countries.length; i++) {
     let country = document.createElement("a");
     country.href = ""
-    country.style.display = "flex"
-    country.style.padding = "10px"
-    country.style.color = "black"
+    country.style.display = "flex";
+    country.style.padding = "10px";
+    country.style.color = "black";
     country.innerHTML = ` <img src='./assets/${countries[i]}_icon.png' id='country_icon' alt='country_icon'> <div>${countries[i]}</div>`;
     country_list.append(country);
 }
@@ -46,3 +55,42 @@ for (let content of contents) {
     observer.observe(content);
 }
 
+
+close_icon.addEventListener("click", CloseVertic);
+vertical_icon.addEventListener("click", ShowVertic);
+
+function CloseVertic() {
+    setTimeout(() => {
+        vertic.style.display = "none"
+    }, 200);
+    vertic.style.transform = "translate(400px, 0px)"
+    blackBg.style.display = "none"
+    document.body.style.overflow = "auto";
+}
+
+function ShowVertic() {
+    vertic.style.display = "flex";
+    setTimeout(() => {
+        vertic.style.transform = "translate(0px, 0px)";
+    }, 200);
+    blackBg.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+window.addEventListener('resize', checkMediaQuery);
+
+function checkMediaQuery() {
+    if (window.innerWidth < 1024) {
+        for (const button of big_appBtns) {
+            button.innerHTML = `${svg} Download from Google Play`;
+        }
+        sml_appBtn.innerHTML = "Download";
+    }
+    if (window.innerWidth > 1023) {
+        for (const button of big_appBtns) {
+            button.innerHTML = `${svg} Download for Windows`;
+        }
+        sml_appBtn.innerHTML = "Open Discord";
+        CloseVertic();
+    }
+}
